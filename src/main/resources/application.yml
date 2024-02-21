@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/star_wars_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  flyway:
+    url: jdbc:mysql://localhost:3306/star_wars_db
+    user: root
+    password: root
+    default-schema: star_wars_db
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    disable-swagger-default-url: false
+    use-root-path: true
+  packages-to-scan: br.com.shaine.starwarsapi.controller
+  cache:
+    disabled: false
+
+
